@@ -1,7 +1,3 @@
--- ===============================
--- Triggers for Automation
--- ===============================
-
 DELIMITER $$
 
 -- Activate membership after payment
