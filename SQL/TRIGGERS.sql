@@ -30,6 +30,7 @@ BEGIN
 END$$
 
 
+
 -- =====================================================
 -- TRIGGER 3:
 -- Activate member automatically when a membership is created
@@ -63,4 +64,6 @@ BEGIN
   END IF;
 END$$
 
+DELIMITER ;
+=======
 DELIMITER ;

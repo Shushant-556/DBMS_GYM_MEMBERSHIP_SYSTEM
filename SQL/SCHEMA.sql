@@ -1,7 +1,14 @@
 
 
+
 CREATE DATABASE IF NOT EXISTS gym_membership_system;
 USE gym_membership_system;
+
+
+CREATE DATABASE IF NOT EXISTS gym_membership_system;
+USE gym_membership_system;
+
+
 
 CREATE TABLE MEMBER (
   member_id INT PRIMARY KEY AUTO_INCREMENT,
