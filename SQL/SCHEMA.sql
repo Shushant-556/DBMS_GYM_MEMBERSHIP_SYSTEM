@@ -1,14 +1,8 @@
--- ===============================
--- Gym Membership System
--- Schema Creation
--- ===============================
+
 
 CREATE DATABASE IF NOT EXISTS gym_membership_system;
 USE gym_membership_system;
 
--- ===============================
--- MEMBER
--- ===============================
 CREATE TABLE MEMBER (
   member_id INT PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(100),
@@ -20,9 +14,7 @@ CREATE TABLE MEMBER (
   status VARCHAR(20)
 );
 
--- ===============================
--- MEMBERSHIP PLAN
--- ===============================
+
 CREATE TABLE MEMBERSHIP_PLAN (
   plan_id INT PRIMARY KEY AUTO_INCREMENT,
   plan_name VARCHAR(50),
@@ -30,9 +22,7 @@ CREATE TABLE MEMBERSHIP_PLAN (
   price DECIMAL(10,2)
 );
 
--- ===============================
--- TRAINER
--- ===============================
+
 CREATE TABLE TRAINER (
   trainer_id INT PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(100),
@@ -40,9 +30,7 @@ CREATE TABLE TRAINER (
   phone VARCHAR(15)
 );
 
--- ===============================
--- MEMBERSHIP
--- ===============================
+
 CREATE TABLE MEMBERSHIP (
   membership_id INT PRIMARY KEY AUTO_INCREMENT,
   member_id INT,
@@ -54,9 +42,7 @@ CREATE TABLE MEMBERSHIP (
   FOREIGN KEY (plan_id) REFERENCES MEMBERSHIP_PLAN(plan_id)
 );
 
--- ===============================
--- PAYMENT
--- ===============================
+
 CREATE TABLE PAYMENT (
   payment_id INT PRIMARY KEY AUTO_INCREMENT,
   member_id INT,
@@ -67,9 +53,7 @@ CREATE TABLE PAYMENT (
   FOREIGN KEY (member_id) REFERENCES MEMBER(member_id)
 );
 
--- ===============================
--- ATTENDANCE
--- ===============================
+
 CREATE TABLE ATTENDANCE (
   attendance_id INT PRIMARY KEY AUTO_INCREMENT,
   member_id INT,
@@ -79,9 +63,7 @@ CREATE TABLE ATTENDANCE (
   FOREIGN KEY (member_id) REFERENCES MEMBER(member_id)
 );
 
--- ===============================
--- TRAINER ASSIGNMENT
--- ===============================
+
 CREATE TABLE TRAINER_ASSIGNMENT (
   assignment_id INT PRIMARY KEY AUTO_INCREMENT,
   trainer_id INT,

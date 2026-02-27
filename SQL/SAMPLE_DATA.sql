@@ -1,6 +1,4 @@
--- ===============================
--- Sample Data Insertion
--- ===============================
+
 
 -- MEMBER
 INSERT INTO MEMBER (name, age, gender, phone, email, join_date, status)
